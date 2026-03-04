@@ -32,7 +32,7 @@ const Contact = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="section-title">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-2 w-fit mx-auto bg-clip-text text-transparent bg-gradient-to-r from-primary via-purple-200 to-purple-600">
             Contato
           </h2>
           <div className="w-16 h-1 bg-primary rounded-full mb-4 mx-auto" />
