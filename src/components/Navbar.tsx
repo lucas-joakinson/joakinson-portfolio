@@ -16,18 +16,18 @@ const Navbar = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="container max-w-5xl flex items-center justify-between h-16 px-6">
+      <div className="container max-w-6xl flex items-center justify-between h-16 px-6">
         <a
           href="https://instagram.com/lucasjoakinsonart"
           target="_blank"
           className="flex items-center font-bold text-xl tracking-tight"
         >
-          <span className="text-cyan-400 font-mono">{">_"}</span>
+          <span className="text-primary font-mono">{">_"}</span>
 
-          <span className="bg-gradient-to-r ml-2 from-cyan-400 via-sky-400 to-purple-500 bg-clip-text text-transparent drop-shadow-[0_0_6px_rgba(56,189,248,0.6)]">
+          <span className="bg-gradient-to-r ml-2 from-primary via-purple-100 to-purple-600 bg-clip-text text-transparent drop-shadow-[0_0_6px_rgba(168,85,247,0.4)]">
             Lucas Joakinson
           </span>
-          <span className="animate-pulse text-cyan-400 font-mono">_</span>
+          <span className="animate-pulse text-primary font-mono">_</span>
         </a>
         <div className="hidden sm:flex items-center gap-8">
           {navItems.map((item) => (
