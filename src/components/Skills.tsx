@@ -37,14 +37,14 @@ const Skills = () => {
           <div className="w-16 h-1 bg-primary rounded-full mb-10" />
         </motion.div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 xs:grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
           {skills.map((skill, i) => {
             const Icon = skill.icon;
 
             return (
               <motion.div
                 key={skill.name}
-                className="group relative p-6 rounded-xl border border-border bg-card text-center hover:border-primary/50 transition-colors cursor-default"
+                className="group relative p-4 sm:p-6 rounded-xl border border-border bg-card text-center hover:border-primary/50 transition-colors cursor-default flex flex-col items-center justify-center min-h-[120px] sm:min-h-[140px]"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -52,10 +52,10 @@ const Skills = () => {
                 whileHover={{ y: -4 }}
               >
                 <Icon
-                  className="w-10 h-10 mx-auto mb-3 transition-transform group-hover:scale-110"
+                  className="w-8 h-8 sm:w-10 sm:h-10 mb-3 transition-transform group-hover:scale-110 shrink-0"
                   style={{ color: skill.color }}
                 />
-                <span className="text-sm font-semibold tracking-wide">
+                <span className="text-xs sm:text-sm font-semibold tracking-wide break-words max-w-full">
                   {skill.name}
                 </span>
               </motion.div>
