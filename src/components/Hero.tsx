@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Github, ArrowDown } from "lucide-react";
+import { Github } from "lucide-react";
 import { useState, useEffect } from "react";
 
 const useTypewriter = (text: string, speed = 50, delay = 800) => {
@@ -111,13 +111,6 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.3 }}
         >
-          <a
-            href="#projetos"
-            className="inline-flex items-center gap-2 px-8 py-3.5 rounded-lg bg-primary text-primary-foreground font-semibold text-base hover:brightness-110 transition-all glow-button"
-          >
-            Ver Projetos
-            <ArrowDown className="w-4 h-4" />
-          </a>
           <a
             href="https://github.com/lucas-joakinson"
             target="_blank"
