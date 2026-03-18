@@ -1,30 +1,33 @@
 import { motion } from "framer-motion";
 import { Mail, Github, Linkedin } from "lucide-react";
-
-const contacts = [
-  {
-    icon: Mail,
-    label: "Email",
-    value: "lucasjoakinson14@gmail.com",
-    href: "mailto:lucasjoakinson14@gmail.com",
-  },
-  {
-    icon: Github,
-    label: "GitHub",
-    value: "lucas-joakinson",
-    href: "https://github.com/lucas-joakinson",
-  },
-  {
-    icon: Linkedin,
-    label: "LinkedIn",
-    value: "Lucas Joakinson",
-    href: "https://linkedin.com/in/lucasjoakinson",
-  },
-];
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Contact = () => {
+  const { t } = useLanguage();
+
+  const contacts = [
+    {
+      icon: Mail,
+      label: t("contact.label.email"),
+      value: "lucasjoakinson14@gmail.com",
+      href: "mailto:lucasjoakinson14@gmail.com",
+    },
+    {
+      icon: Github,
+      label: t("contact.label.github"),
+      value: "lucas-joakinson",
+      href: "https://github.com/lucas-joakinson",
+    },
+    {
+      icon: Linkedin,
+      label: t("contact.label.linkedin"),
+      value: "Lucas Joakinson",
+      href: "https://linkedin.com/in/lucasjoakinson",
+    },
+  ];
+
   return (
-    <section id="contato" className="py-24 px-6 bg-card/50">
+    <section id={t("section.contact")} className="py-24 px-6 bg-card/50">
       <div className="container max-w-2xl text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -33,11 +36,11 @@ const Contact = () => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl sm:text-4xl font-bold mb-2 w-fit mx-auto bg-clip-text text-transparent bg-gradient-to-r from-primary via-purple-200 to-purple-600">
-            Contato
+            {t("contact.title")}
           </h2>
           <div className="w-16 h-1 bg-primary rounded-full mb-4 mx-auto" />
           <p className="text-muted-foreground mb-10">
-            Vamos conversar? Entre em contato por qualquer um dos canais abaixo!
+            {t("contact.subtitle")}
           </p>
         </motion.div>
 

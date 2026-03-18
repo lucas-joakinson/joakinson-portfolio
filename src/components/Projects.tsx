@@ -2,21 +2,24 @@ import { motion } from "framer-motion";
 import { Github, ExternalLink, Code2 } from "lucide-react";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-
-const projects = [
-  {
-    title: "Taskify",
-    description: "Uma plataforma completa de gerenciamento de tarefas com gráfico de progresso e monitoramento das tarefas.",
-    techs: ["React", "Tailwind CSS", "Mockoon"],
-    github: "https://github.com/lucas-joakinson/taskify",
-    demo: "https://taskify-demo-lj.vercel.app/",
-    image: "images/telalogin.png"
-  }
-];
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Projects = () => {
+  const { t } = useLanguage();
+
+  const projects = [
+    {
+      title: "Taskify",
+      description: t("projects.taskify.desc"),
+      techs: ["React", "Tailwind CSS", "Mockoon"],
+      github: "https://github.com/lucas-joakinson/taskify",
+      demo: "https://taskify-demo-lj.vercel.app/",
+      image: "images/telalogin.png"
+    }
+  ];
+
   return (
-    <section id="projetos" className="py-24 px-6">
+    <section id={t("section.projects")} className="py-24 px-6">
       <div className="container max-w-4xl">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -25,7 +28,7 @@ const Projects = () => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl sm:text-4xl font-bold mb-2 w-fit bg-clip-text text-transparent bg-gradient-to-r from-primary via-purple-200 to-purple-600">
-            Projetos em Destaque
+            {t("projects.title")}
           </h2>
           <div className="w-16 h-1 bg-primary rounded-full mb-12" />
         </motion.div>
@@ -93,13 +96,13 @@ const Projects = () => {
                   <Button asChild variant="outline" size="sm" className="w-full gap-2">
                     <a href={project.github} target="_blank" rel="noopener noreferrer">
                       <Github className="w-4 h-4" />
-                      GitHub
+                      {t("projects.cta.github")}
                     </a>
                   </Button>
                   <Button asChild size="sm" className="w-full gap-2">
                     <a href={project.demo} target="_blank" rel="noopener noreferrer">
                       <ExternalLink className="w-4 h-4" />
-                      Demo
+                      {t("projects.cta.demo")}
                     </a>
                   </Button>
                 </CardFooter>

@@ -9,21 +9,24 @@ import {
 } from "react-icons/si";
 import { HiOutlineDevicePhoneMobile } from "react-icons/hi2";
 import { TbApi } from "react-icons/tb";
-
-const skills = [
-  { name: "React", icon: SiReact, color: "#61DAFB" },
-  { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
-  { name: "JavaScript", icon: SiJavascript, color: "#F7DF1E" },
-  { name: "Consumo de APIs", icon: TbApi, color: "#6366F1" },
-  { name: "Responsividade", icon: HiOutlineDevicePhoneMobile, color: "#22C55E" },
-  { name: "Tailwind CSS", icon: SiTailwindcss, color: "#1572B6" },
-  { name: "Git", icon: SiGit, color: "#F05032" },
-  { name: "Figma", icon: SiFigma, color: "#F24E1E" },
-];
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Skills = () => {
+  const { t } = useLanguage();
+
+  const skills = [
+    { name: "React", icon: SiReact, color: "#61DAFB" },
+    { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
+    { name: "JavaScript", icon: SiJavascript, color: "#F7DF1E" },
+    { name: t("skills.item.api"), icon: TbApi, color: "#6366F1" },
+    { name: t("skills.item.responsive"), icon: HiOutlineDevicePhoneMobile, color: "#22C55E" },
+    { name: "Tailwind CSS", icon: SiTailwindcss, color: "#1572B6" },
+    { name: "Git", icon: SiGit, color: "#F05032" },
+    { name: "Figma", icon: SiFigma, color: "#F24E1E" },
+  ];
+
   return (
-    <section id="especialidades" className="py-24 px-6 bg-card/50">
+    <section id={t("section.skills")} className="py-24 px-6 bg-card/50">
       <div className="container max-w-4xl">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -32,7 +35,7 @@ const Skills = () => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl sm:text-4xl font-bold mb-2 w-fit bg-clip-text text-transparent bg-gradient-to-r from-primary via-purple-200 to-purple-600">
-            Especialidades
+            {t("skills.title")}
           </h2>
           <div className="w-16 h-1 bg-primary rounded-full mb-10" />
         </motion.div>

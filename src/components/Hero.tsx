@@ -1,12 +1,15 @@
 import { motion } from "framer-motion";
 import { Github } from "lucide-react";
 import { useState, useEffect } from "react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const useTypewriter = (text: string, speed = 50, delay = 800) => {
   const [displayed, setDisplayed] = useState("");
   const [done, setDone] = useState(false);
 
   useEffect(() => {
+    setDisplayed("");
+    setDone(false);
     const timeout = setTimeout(() => {
       let i = 0;
       const interval = setInterval(() => {
@@ -26,34 +29,27 @@ const useTypewriter = (text: string, speed = 50, delay = 800) => {
 };
 
 const Hero = () => {
+  const { t } = useLanguage();
+  
+  const fullPrefix = t("hero.subtitle.prefix");
+  const fullHighlight = t("hero.subtitle.highlight");
+  
   const { displayed, done } = useTypewriter(
-    "Construindo Interfaces Modernas e Escaláveis",
+    `${fullPrefix}${fullHighlight}`,
     45,
     900
   );
 
-  const fullPrefix = "Construindo Interfaces ";
-  const fullHighlight = "Modernas e Escaláveis";
-
   const renderTyped = () => {
     const prefixEnd = fullPrefix.length;
-    const highlightEnd = prefixEnd + fullHighlight.length;
 
     if (displayed.length <= prefixEnd) {
       return <>{displayed}</>;
-    } else if (displayed.length <= highlightEnd) {
-      return (
-        <>
-          {displayed.slice(0, prefixEnd)}
-          <span className="text-primary">{displayed.slice(prefixEnd)}</span>
-        </>
-      );
     } else {
       return (
         <>
           {displayed.slice(0, prefixEnd)}
-          <span className="text-primary">{displayed.slice(prefixEnd, highlightEnd)}</span>
-          {displayed.slice(highlightEnd)}
+          <span className="text-primary">{displayed.slice(prefixEnd)}</span>
         </>
       );
     }
@@ -71,7 +67,7 @@ const Hero = () => {
           transition={{ duration: 0.7 }}
         >
           <span className="inline-block mb-6 px-4 py-1.5 rounded-full border border-border bg-secondary text-primary text-sm font-mono font-medium tracking-wide">
-            Frontend Developer
+            {t("hero.role")}
           </span>
         </motion.div>
 
@@ -81,7 +77,7 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
         >
-          Lucas Joakinson
+          {t("hero.title")}
         </motion.h1>
 
         <motion.h2
@@ -100,9 +96,7 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.3 }}
         >
-          Frontend Developer com experiência corporativa, focado em React,
-          componentização, integração com APIs e criação de interfaces
-          performáticas.
+          {t("hero.description")}
         </motion.p>
 
         <motion.div
@@ -112,10 +106,10 @@ const Hero = () => {
           transition={{ duration: 0.7, delay: 0.3 }}
         >
           <a
-            href="#projetos"
+            href={`#${t("section.projects")}`}
             className="inline-flex items-center gap-2 px-8 py-3.5 rounded-lg bg-primary text-primary-foreground font-semibold text-base hover:opacity-90 transition-opacity"
           >
-            Ver Projetos
+            {t("hero.cta.projects")}
           </a>
           <a
             href="https://github.com/lucas-joakinson"
@@ -124,7 +118,7 @@ const Hero = () => {
             className="inline-flex items-center gap-2 px-8 py-3.5 rounded-lg border border-border bg-secondary text-secondary-foreground font-semibold text-base hover:bg-muted transition-colors"
           >
             <Github className="w-4 h-4" />
-            GitHub
+            {t("hero.cta.github")}
           </a>
         </motion.div>
       </div>

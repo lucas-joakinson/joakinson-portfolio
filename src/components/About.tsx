@@ -1,15 +1,18 @@
 import { motion } from "framer-motion";
 import { Code2, Layers, Zap } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const About = () => {
+  const { t } = useLanguage();
+
   const highlights = [
-    { icon: Code2, text: "Código limpo e componentizado" },
-    { icon: Layers, text: "Figma → Código pixel-perfect" },
-    { icon: Zap, text: "Performance e acessibilidade" },
+    { icon: Code2, text: t("about.highlight1") },
+    { icon: Layers, text: t("about.highlight2") },
+    { icon: Zap, text: t("about.highlight3") },
   ];
 
   return (
-    <section id="sobre" className="py-24 px-6">
+    <section id={t("section.about")} className="py-24 px-6">
       <div className="container max-w-4xl">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -18,19 +21,15 @@ const About = () => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl sm:text-4xl font-bold mb-2 w-fit bg-clip-text text-transparent bg-gradient-to-r from-primary via-purple-200 to-purple-600">
-            Sobre mim
+            {t("about.title")}
           </h2>
           <div className="w-16 h-1 bg-primary rounded-full mb-8" />
 
           <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-            Sou desenvolvedor Frontend com experiência em ambiente corporativo,
-            trabalhando com <strong className="text-foreground">React, JavaScript e TypeScript</strong> para criar
-            interfaces modernas, escaláveis e com foco em performance.
+            {t("about.description1")}
           </p>
           <p className="text-muted-foreground text-lg leading-relaxed mb-10">
-            Tenho facilidade em transformar layouts do Figma em código fiel ao design,
-            prezando por organização e componentização. Também possuo conhecimentos em 
-            <strong className="text-foreground"> SQL e desenvolvimento backend</strong>.
+            {t("about.description2")}
           </p>
 
           <div className="grid sm:grid-cols-3 gap-4">

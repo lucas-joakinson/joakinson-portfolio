@@ -1,28 +1,29 @@
 import { motion } from "framer-motion";
 import { Briefcase, Calendar } from "lucide-react";
-
-const experiences = [
-  {
-    role: "Suporte Operacional de Sistemas",
-    company: "Plansul Planejamento e Consultoria",
-    period: "2024 — Presente",
-    description:
-      "Desenvolvimento de interfaces com React e TypeScript em ambiente corporativo. Componentização avançada, integração com APIs RESTful e participação em code reviews.",
-    techs: ["React","React Native", "TypeScript", "Tailwind CSS", "REST APIs", "Git", "PostgreSQL"],
-  },
-  {
-    role: "Jovem Aprendiz Administrativo",
-    company: "Plansul Planejamento e Consultoria",
-    period: "2023 — 2024",
-    description:
-      "Tradução de layouts do Figma para código pixel-perfect. Criação de landing pages responsivas e manutenção de projetos existentes com foco em performance.",
-    techs: ["HTML", "CSS", "JavaScript", "Figma", "React"],
-  }
-];
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Experience = () => {
+  const { t } = useLanguage();
+
+  const experiences = [
+    {
+      role: t("exp.role1"),
+      company: t("exp.company1"),
+      period: t("exp.period1"),
+      description: t("exp.desc1"),
+      techs: ["React", "React Native", "TypeScript", "Tailwind CSS", "REST APIs", "Git", "PostgreSQL"],
+    },
+    {
+      role: t("exp.role2"),
+      company: t("exp.company2"),
+      period: t("exp.period2"),
+      description: t("exp.desc2"),
+      techs: ["HTML", "CSS", "JavaScript", "Figma", "React"],
+    }
+  ];
+
   return (
-    <section id="experiencia" className="py-24 px-6">
+    <section id={t("section.experience")} className="py-24 px-6">
       <div className="container max-w-4xl">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -31,7 +32,7 @@ const Experience = () => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl sm:text-4xl font-bold mb-2 w-fit bg-clip-text text-transparent bg-gradient-to-r from-primary via-purple-200 to-purple-600">
-            Experiência Profissional
+            {t("exp.title")}
           </h2>
           <div className="w-16 h-1 bg-primary rounded-full mb-12" />
         </motion.div>
