@@ -112,6 +112,12 @@ const Hero = () => {
           transition={{ duration: 0.7, delay: 0.3 }}
         >
           <a
+            href="#projetos"
+            className="inline-flex items-center gap-2 px-8 py-3.5 rounded-lg bg-primary text-primary-foreground font-semibold text-base hover:opacity-90 transition-opacity"
+          >
+            Ver Projetos
+          </a>
+          <a
             href="https://github.com/lucas-joakinson"
             target="_blank"
             rel="noopener noreferrer"

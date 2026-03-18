@@ -5,6 +5,7 @@ import Skills from "@/components/Skills";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Experience from "@/components/Experience";
+import Projects from "@/components/Projects";
 
 const Index = () => {
   return (
@@ -13,6 +14,7 @@ const Index = () => {
       <Hero />
       <About />
       <Experience />
+      <Projects />
       <Skills />
       <Contact />
       <Footer />

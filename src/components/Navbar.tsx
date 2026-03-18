@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 const navItems = [
   { label: "Sobre", href: "#sobre" },
   { label: "Experiência", href: "#experiencia" },
+  { label: "Projetos", href: "#projetos" },
   { label: "Especialidades", href: "#especialidades" },
   { label: "Contato", href: "#contato" },
 ];
