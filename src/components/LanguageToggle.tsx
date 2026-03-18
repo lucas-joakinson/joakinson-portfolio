@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { motion } from "framer-motion";
 
 export const LanguageToggle = () => {
   const { language, setLanguage } = useLanguage();
