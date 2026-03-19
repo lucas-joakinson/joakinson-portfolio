@@ -53,6 +53,7 @@ const translations = {
     // Projects
     "projects.title": "Projetos em Destaque",
     "projects.taskify.desc": "Uma plataforma completa de gerenciamento de tarefas com gráfico de progresso e monitoramento das tarefas.",
+    "projects.dashy.desc": "Uma plataforma de dashboard interativa para visualização de dados em tempo real via integração com API.",
     "projects.cta.github": "GitHub",
     "projects.cta.demo": "Demo",
     
@@ -115,6 +116,7 @@ const translations = {
     // Projects
     "projects.title": "Featured Projects",
     "projects.taskify.desc": "A complete task management platform with progress charts and task monitoring.",
+    "projects.dashy.desc": "An interactive dashboard platform for real-time data visualization with API integration.",
     "projects.cta.github": "GitHub",
     "projects.cta.demo": "Demo",
     

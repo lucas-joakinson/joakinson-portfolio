@@ -11,10 +11,18 @@ const Projects = () => {
     {
       title: "Taskify",
       description: t("projects.taskify.desc"),
-      techs: ["React", "Tailwind CSS", "Mockoon"],
+      techs: ["React","Typescript", "Tailwind CSS", "Mockoon"],
       github: "https://github.com/lucas-joakinson/taskify",
       demo: "https://taskify-demo-lj.vercel.app/",
       image: "images/telalogin.png"
+    },
+    {
+      title: "Dashy_",
+      description: t("projects.dashy.desc"),
+      techs: ["React","Typescript", "Tailwind CSS", "JSONDummyAPI"],
+      github: "https://github.com/lucas-joakinson/Dashy_",
+      demo: "https://dashy-lj-dev.vercel.app/",
+      image: "images/dashy.png"
     }
   ];
 
