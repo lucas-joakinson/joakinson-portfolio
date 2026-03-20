@@ -34,7 +34,7 @@ const Skills = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl sm:text-4xl font-bold mb-2 w-fit bg-clip-text text-transparent bg-gradient-to-r from-primary via-purple-200 to-purple-600">
+          <h2 className="section-title">
             {t("skills.title")}
           </h2>
           <div className="w-16 h-1 bg-primary rounded-full mb-10" />
