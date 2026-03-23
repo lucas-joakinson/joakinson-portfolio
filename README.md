@@ -1,73 +1,54 @@
-# React + TypeScript + Vite
+# Lucas Joakinson - Portfólio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bem-vindo ao meu portfólio pessoal! Este é o lugar onde reúno meus principais projetos, experiências e as tecnologias que venho dominando como desenvolvedor Frontend.
 
-Currently, two official plugins are available:
+## O Projeto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Este site foi construído para ser rápido, moderno e acessível. Ele serve não apenas como uma vitrine para o meu trabalho, mas também como um exemplo prático de aplicação das tecnologias que utilizo no dia a dia.
 
-## React Compiler
+### Tecnologias Utilizadas
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Framework:** [React 18](https://reactjs.org/)
+- **Linguagem:** [TypeScript](https://www.typescriptlang.org/)
+- **Build Tool:** [Vite](https://vitejs.dev/)
+- **Estilização:** [Tailwind CSS](https://tailwindcss.com/)
+- **UI Components:** [Shadcn/UI](https://ui.shadcn.com/) (Radix UI)
+- **Animações:** [Framer Motion](https://www.framer.com/motion/)
+- **Ícones:** [Lucide React](https://lucide.dev/)
 
-## Expanding the ESLint configuration
+## Funcionalidades Principais
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- 🌓 **Dark/Light Mode:** Suporte total a temas claro e escuro.
+- 🌎 **Internacionalização (i18n):** Tradução completa para Português e Inglês.
+- 📱 **Responsivo:** Layout que se adapta a qualquer tamanho de tela (Mobile, Tablet, Desktop).
+- 🎨 **Componentização:** Código organizado e reutilizável seguindo as melhores práticas.
+- 🚀 **Performance:** Carregamento rápido e animações fluidas.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 📁 Estrutura do Projeto
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- `src/components`: Componentes reutilizáveis e seções do site (Hero, About, Projects, etc).
+- `src/contexts`: Gerenciamento de estado global (Tema e Idioma).
+- `src/ui`: Componentes base da interface (botões, cards, inputs).
+- `src/data`: Onde ficam os textos e informações estáticas (em breve centralizado).
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Como rodar o projeto localmente
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/lucas-joakinson/joakinson-portfolio.git
+   ```
+2. Entre na pasta:
+   ```bash
+   cd joakinson-portfolio
+   ```
+3. Instale as dependências:
+   ```bash
+   npm install
+   ```
+4. Inicie o servidor de desenvolvimento:
+   ```bash
+   npm run dev
+   ```
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
+Feito com uma coquinha e muito código por **Lucas Joakinson**.
