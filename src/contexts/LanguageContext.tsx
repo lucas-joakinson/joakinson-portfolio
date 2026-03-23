@@ -52,8 +52,12 @@ const translations = {
     
     // Projects
     "projects.title": "Projetos em Destaque",
-    "projects.taskify.desc": "Uma plataforma completa de gerenciamento de tarefas com gráfico de progresso e monitoramento das tarefas.",
-    "projects.dashy.desc": "Uma plataforma de dashboard interativa para visualização de dados em tempo real via integração com API.",
+    "projects.taskify.desc": `Taskify é uma aplicação de gerenciamento de tarefas baseada em quadro Kanban, desenvolvida para organizar fluxos de trabalho de forma visual e intuitiva.
+
+A aplicação permite criar, mover e gerenciar tarefas entre diferentes estágios utilizando drag and drop, proporcionando uma experiência dinâmica e fluida. Conta também com funcionalidades como busca de tarefas, interface responsiva e uma estrutura baseada em componentes reutilizáveis.`,
+    "projects.dashy.desc": `Dashy_ é uma aplicação que combina um dashboard de dados com uma simulação de e-commerce, permitindo a visualização e análise de informações de produtos e usuários.
+
+O sistema apresenta métricas em tempo real, listagem de produtos e filtros dinâmicos de busca, proporcionando uma navegação eficiente e organizada. A arquitetura foi pensada para ser escalável, com foco em componentização e reutilização de código.`,
     "projects.cta.github": "GitHub",
     "projects.cta.demo": "Demo",
     
@@ -115,8 +119,12 @@ const translations = {
     
     // Projects
     "projects.title": "Featured Projects",
-    "projects.taskify.desc": "A complete task management platform with progress charts and task monitoring.",
-    "projects.dashy.desc": "An interactive dashboard platform for real-time data visualization with API integration.",
+    "projects.taskify.desc": `Taskify is a task management application based on a Kanban board, designed to organize workflows in a visual and intuitive way.
+
+It allows users to create, move, and manage tasks across different stages using drag-and-drop interactions, delivering a dynamic and smooth user experience. It also includes features such as task search, responsive design, and a component-based architecture.`,
+    "projects.dashy.desc": `Dashy_ is an application that combines a data dashboard with an e-commerce simulation, enabling the visualization and analysis of product and user information.
+
+It features real-time metrics, product listings, and dynamic search filters, providing an efficient and structured browsing experience. The architecture is designed to be scalable, focusing on componentization and code reusability.`,
     "projects.cta.github": "GitHub",
     "projects.cta.demo": "Demo",
     

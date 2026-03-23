@@ -85,7 +85,7 @@ const Projects = () => {
                 </CardHeader>
 
                 <CardContent className="flex-grow">
-                  <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                  <p className="text-sm text-muted-foreground leading-relaxed mb-4 whitespace-pre-line">
                     {project.description}
                   </p>
                   <div className="flex flex-wrap gap-2">
