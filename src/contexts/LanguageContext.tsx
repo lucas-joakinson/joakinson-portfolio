@@ -41,7 +41,7 @@ const translations = {
     
     // Experience
     "exp.title": "Experiência Profissional",
-    "exp.role1": "Suporte Operacional de Sistemas",
+    "exp.role1": "Desenvolvedor Front-End (atuação interna)",
     "exp.company1": "Plansul Planejamento e Consultoria",
     "exp.period1": "2024 — Presente",
     "exp.desc1": "Desenvolvimento de interfaces com React e TypeScript em ambiente corporativo. Componentização avançada, integração com APIs RESTful e participação em code reviews.",
@@ -108,7 +108,7 @@ O sistema apresenta métricas em tempo real, listagem de produtos e filtros din�
     
     // Experience
     "exp.title": "Professional Experience",
-    "exp.role1": "Systems Operational Support",
+    "exp.role1": "Front-End Developer (internal role)",
     "exp.company1": "Plansul Planejamento e Consultoria",
     "exp.period1": "2024 — Present",
     "exp.desc1": "Development of interfaces with React and TypeScript in a corporate environment. Advanced componentization, RESTful API integration, and participation in code reviews.",
