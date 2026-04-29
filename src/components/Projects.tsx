@@ -182,11 +182,11 @@ const Projects = () => {
                   </div>
                 )}
                 
-                <div className="aspect-[16/10] relative overflow-hidden">
+                <div className="aspect-[16/10] relative overflow-hidden bg-muted flex items-center justify-center">
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-105"
+                    className="object-contain w-full h-full transition-transform duration-700 group-hover:scale-105 p-4"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center">
                     <div className="bg-primary text-primary-foreground p-3 rounded-full shadow-2xl transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
@@ -229,25 +229,28 @@ const Projects = () => {
       </div>
 
       <Dialog open={!!selectedProject} onOpenChange={() => setSelectedProject(null)}>
-        <DialogContent className="max-w-4xl p-0 overflow-hidden border-primary/20 bg-card/95 backdrop-blur-xl">
+        <DialogContent className="w-[95vw] max-w-4xl p-0 overflow-hidden border-primary/20 bg-card/95 backdrop-blur-xl max-h-[95vh]">
+          <DialogDescription className="sr-only">
+            {selectedProject?.title} project details
+          </DialogDescription>
           <AnimatePresence>
             {selectedProject && (
               <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.95 }}
-                className="flex flex-col h-[90vh] sm:h-auto max-h-[90vh]"
+                className="flex flex-col h-[95vh] max-h-[95vh]"
               >
-                <div className="relative group">
+                <div className="relative group flex-shrink-0">
                   <Carousel className="w-full">
                     <CarouselContent>
                       {selectedProject.images.map((img, idx) => (
                         <CarouselItem key={idx}>
-                          <div className="aspect-video w-full overflow-hidden">
+                          <div className="aspect-video w-full overflow-hidden bg-muted flex items-center justify-center">
                             <img
                               src={img}
                               alt={`${selectedProject.title} screenshot ${idx + 1}`}
-                              className="w-full h-full object-cover"
+                              className="w-full h-full object-contain p-2"
                             />
                           </div>
                         </CarouselItem>
@@ -260,9 +263,9 @@ const Projects = () => {
                   </Carousel>
                 </div>
 
-                <div className="p-6 sm:p-8 overflow-y-auto custom-scrollbar">
-                  <DialogHeader className="mb-6">
-                    <div className="flex items-center justify-between gap-4 flex-wrap">
+                <div className="p-4 sm:p-6 overflow-y-auto custom-scrollbar flex-1 min-h-0">
+                  <DialogHeader className="mb-4 sm:mb-6">
+                    <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-4">
                       <div className="flex items-center gap-3">
                         <div className="p-2 bg-primary/10 rounded-lg">
                           <Code2 className="w-6 h-6 text-primary" />
@@ -271,7 +274,7 @@ const Projects = () => {
                           {selectedProject.title}
                         </DialogTitle>
                       </div>
-                      <div className="flex gap-2">
+                      <div className="flex gap-1.5 sm:gap-2 flex-wrap">
                         <Button asChild size="sm" variant="outline" className="gap-2">
                           <a href={selectedProject.github} target="_blank" rel="noopener noreferrer">
                             <Github className="w-4 h-4" />
@@ -296,7 +299,7 @@ const Projects = () => {
                     </div>
                   </DialogHeader>
 
-                  <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                  <div className="grid grid-cols-1 gap-6 sm:gap-8">
                     <div className="lg:col-span-2 space-y-6">
                       <div>
                         <h4 className="text-sm font-semibold uppercase tracking-wider text-primary mb-3">
