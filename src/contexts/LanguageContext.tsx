@@ -52,14 +52,15 @@ const translations = {
     
     // Projects
     "projects.title": "Projetos em Destaque",
-    "projects.taskify.desc": `Taskify é uma aplicação de gerenciamento de tarefas baseada em quadro Kanban, desenvolvida para organizar fluxos de trabalho de forma visual e intuitiva.
-
-A aplicação permite criar, mover e gerenciar tarefas entre diferentes estágios utilizando drag and drop, proporcionando uma experiência dinâmica e fluida. Conta também com funcionalidades como busca de tarefas, interface responsiva e uma estrutura baseada em componentes reutilizáveis.`,
-    "projects.dashy.desc": `Dashy_ é uma aplicação que combina um dashboard de dados com uma simulação de e-commerce, permitindo a visualização e análise de informações de produtos e usuários.
-
-O sistema apresenta métricas em tempo real, listagem de produtos e filtros dinâmicos de busca, proporcionando uma navegação eficiente e organizada. A arquitetura foi pensada para ser escalável, com foco em componentização e reutilização de código.`,
+    "projects.estoque.desc": `Sistema full-stack de gestão de patrimônio com autenticação segura e RBAC granular. Frontend em React + TypeScript com TanStack Query para cache de dados, backend em Fastify com Prisma ORM e PostgreSQL. Importação em massa via Excel JS, auditoria completa com logs de operações, validação com Zod e interface responsiva com Tailwind CSS.`,
+    "projects.taskify.desc": `App de gerenciamento de tarefas com drag-and-drop funcional e animações fluidas. Implementado com React, TypeScript e Framer Motion para transições suaves. Responsivo e otimizado para performance em qualquer dispositivo, com interface intuitiva usando Tailwind CSS.`,
+    "projects.dashy.desc": `Dashboard analítico para e-commerce com gráficos interativos e filtros dinâmicos. Desenvolvido com React, TypeScript e Recharts para visualização de dados em tempo real. Context API para gerenciamento de estado e Tailwind CSS para interface responsiva e moderna.`,
     "projects.cta.github": "GitHub",
     "projects.cta.demo": "Demo",
+    "projects.modal.techs": "Tecnologias",
+    "projects.modal.visit": "Visitar Projeto",
+    "projects.modal.gallery": "Galeria",
+    "projects.featured": "Destaque",
     
     // Skills
     "skills.title": "Especialidades",
@@ -119,14 +120,15 @@ O sistema apresenta métricas em tempo real, listagem de produtos e filtros din�
     
     // Projects
     "projects.title": "Featured Projects",
-    "projects.taskify.desc": `Taskify is a task management application based on a Kanban board, designed to organize workflows in a visual and intuitive way.
-
-It allows users to create, move, and manage tasks across different stages using drag-and-drop interactions, delivering a dynamic and smooth user experience. It also includes features such as task search, responsive design, and a component-based architecture.`,
-    "projects.dashy.desc": `Dashy_ is an application that combines a data dashboard with an e-commerce simulation, enabling the visualization and analysis of product and user information.
-
-It features real-time metrics, product listings, and dynamic search filters, providing an efficient and structured browsing experience. The architecture is designed to be scalable, focusing on componentization and code reusability.`,
+    "projects.estoque.desc": `Full-stack asset management system with secure authentication and granular RBAC. React + TypeScript frontend with TanStack Query for data caching, Fastify backend with Prisma ORM and PostgreSQL. Bulk Excel imports with Excel JS, complete audit logs, Zod validation, and responsive UI with Tailwind CSS.`,
+    "projects.taskify.desc": `Task management app with functional drag-and-drop and smooth animations. Built with React, TypeScript, and Framer Motion for seamless transitions. Responsive and performance-optimized across all devices with intuitive UI using Tailwind CSS.`,
+    "projects.dashy.desc": `Analytical e-commerce dashboard with interactive charts and dynamic filters. Built with React, TypeScript, and Recharts for real-time data visualization. Context API for state management and Tailwind CSS for responsive, modern interface.`,
     "projects.cta.github": "GitHub",
     "projects.cta.demo": "Demo",
+    "projects.modal.techs": "Technologies",
+    "projects.modal.visit": "Visit Project",
+    "projects.modal.gallery": "Gallery",
+    "projects.featured": "Featured",
     
     // Skills
     "skills.title": "Skills",
